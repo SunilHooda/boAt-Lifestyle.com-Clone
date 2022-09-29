@@ -15,6 +15,7 @@ import { FaUser } from "react-icons/fa";
 import { IoMdCart } from "react-icons/io";
 import { Categories } from "./Categories";
 import { MenuDrop } from "./MenuDrop";
+import LoginPopup from "./LoginPopup";
 
 export function Navbar() {
   const [login, setLogin] = useState(false);
@@ -127,7 +128,7 @@ export function Navbar() {
         >
           <Box>
             <FaUser cursor={"pointer"} onClick={() => setLogin(!login)} />
-            {/* {login ? <LoginPopup setLogin={setLogin} login={login} /> : null} */}
+            {login ? <LoginPopup setLogin={setLogin} login={login} /> : null}
           </Box>
           <Box>
             <IoMdCart cursor={"pointer"} />

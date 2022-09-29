@@ -7,9 +7,10 @@ export function MenuDrop() {
       <UnorderedList
         listStyleType={"none"}
         position="absolute"
-        top={"98px"}
+        top={"100px"}
         ml="-25px"
         border={"1px solid lightgrey"}
+        borderBottomRadius={"1rem"}
       >
         <Flex
           alignItems={"start"}

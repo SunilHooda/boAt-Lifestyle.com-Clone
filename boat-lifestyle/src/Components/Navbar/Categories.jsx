@@ -9,12 +9,12 @@ export function Categories() {
         borderBottomRadius={"1rem"}
         zIndex={"10"}
         left={"80px"}
-        width="auto"
+        width="100%"
         margin={"auto"}
         boxSize="border-box"
-        border={"1px solid grey"}
+        border={"1px solid lightgrey"}
         position="absolute"
-        top="97px"
+        top="100px"
         p="20px"
         // alignItems={"center"}
         listStyleType={"none"}
