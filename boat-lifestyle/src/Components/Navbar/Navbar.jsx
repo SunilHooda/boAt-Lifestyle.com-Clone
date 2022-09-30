@@ -43,7 +43,15 @@ export function Navbar() {
       <Box color={"white"} bg="black" textAlign={"center"} p="7px 20px">
         Plug in to festivities with 75% OFF! Come Sail with boAt 💃{" "}
       </Box>
-      <Flex bg="white" color={"black"}>
+      <Flex
+        bg="white"
+        color={"black"}
+        mb={"5px"}
+        position={"sticky"}
+        zIndex={"10"}
+        top="0px"
+        boxShadow={" rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;"}
+      >
         <Box>
           <Link>
             <Image
@@ -67,6 +75,7 @@ export function Navbar() {
               onMouseEnter={handleDrop}
               onMouseLeave={removeDrop}
               padding={"1rem"}
+              marginTop={"6px"}
               cursor="pointer"
               _hover={{ textDecoration: "underline" }}
             >
@@ -76,12 +85,14 @@ export function Navbar() {
             <ListItem
               padding={"1rem"}
               cursor="pointer"
+              marginTop={"6px"}
               _hover={{ textDecoration: "underline" }}
             >
               SAIL WITH BOAT
             </ListItem>
             <ListItem
               p="1rem"
+              marginTop={"6px"}
               _hover={{ textDecoration: "underline" }}
               cursor="pointer"
             >
@@ -92,6 +103,7 @@ export function Navbar() {
               onMouseLeave={removeMenu}
               padding={"1rem"}
               cursor="pointer"
+              marginTop={"6px"}
               _hover={{ textDecoration: "underline" }}
             >
               More <ChevronDownIcon />
@@ -106,7 +118,7 @@ export function Navbar() {
             position={"absolute"}
             zIndex="5"
             color={"black"}
-            top="65px"
+            top="28px"
             ml="10px"
           />
           <Input

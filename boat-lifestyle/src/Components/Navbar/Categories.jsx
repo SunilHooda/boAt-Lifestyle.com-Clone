@@ -5,7 +5,7 @@ export function Categories() {
   return (
     <>
       <UnorderedList
-        h="150px"
+        h="180px"
         borderBottomRadius={"1rem"}
         zIndex={"10"}
         left={"80px"}
@@ -14,8 +14,8 @@ export function Categories() {
         boxSize="border-box"
         border={"1px solid lightgrey"}
         position="absolute"
-        top="100px"
-        p="20px"
+        top="70px"
+        p="40px"
         // alignItems={"center"}
         listStyleType={"none"}
         bg="white"
@@ -23,8 +23,8 @@ export function Categories() {
         <Grid
           alignItems={"center"}
           templateColumns="repeat(4, 1fr)"
-          rowGap={10}
-          columnGap={30}
+          rowGap={90}
+          columnGap={140}
         >
           <ListItem>
             <Link to={"#"}>

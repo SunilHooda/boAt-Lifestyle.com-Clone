@@ -7,7 +7,8 @@ export function MenuDrop() {
       <UnorderedList
         listStyleType={"none"}
         position="absolute"
-        top={"100px"}
+        zIndex={"10"}
+        top={"70px"}
         ml="-25px"
         border={"1px solid lightgrey"}
         borderBottomRadius={"1rem"}
