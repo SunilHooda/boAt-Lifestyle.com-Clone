@@ -9,9 +9,10 @@ const LoginPopup = ({ login, setLogin }) => {
       bg={"white"}
       h={"90px"}
       w={"210px"}
-      position="fixed"
-      right={15}
-      top={109}
+      position="absolute"
+      right={"15px"}
+      top={"70px"}
+      zIndex={"10"}
       p="5px"
       borderRadius={"5px"}
       border="1px solid lightgrey"
