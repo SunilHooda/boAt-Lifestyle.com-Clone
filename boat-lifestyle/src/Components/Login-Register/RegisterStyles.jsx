@@ -5,7 +5,6 @@ export const Container = styled.div`
   background-color: white;
   color: black !important;
   padding-top: 20px;
-  border: 0.1px solid black;
 
   input {
     background-color: white;

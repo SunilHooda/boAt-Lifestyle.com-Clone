@@ -1,6 +1,9 @@
-import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Text, useToast } from "@chakra-ui/react";
 import { FaStar } from "react-icons/fa";
 import { MdFlashOn } from "react-icons/md";
+import { AppContext } from "./../Context/AppContext";
+import { useContext } from "react";
+
 export function SingleProductBox({
   id,
   image,
@@ -9,13 +12,27 @@ export function SingleProductBox({
   price,
   strp,
   dec,
+  item,
 }) {
+  const { handleCartData } = useContext(AppContext);
+  const toast = useToast();
+
+  const handleToast = () => {
+    toast({
+      title: "Product Added To Cart.",
+      // description: "We've created your account for you.",
+      status: "success",
+      duration: 1000,
+      isClosable: true,
+    });
+  };
+
   return (
     <>
       <Box
         borderRadius={"10px"}
         color={"black"}
-        h="430px"
+        h="451px"
         bgColor="#EAEAEA"
         w={"85%"}
         p={"8px"}
@@ -29,7 +46,7 @@ export function SingleProductBox({
         >
           <Image
             m="auto"
-            ml={"5px"}
+            ml={"15px"}
             mt={"10px"}
             w="255px"
             h="58%"
@@ -93,6 +110,7 @@ export function SingleProductBox({
 
           <Box mt={"10px"} textAlign={"center"}>
             <Button
+              onClick={() => handleCartData(item)}
               width={"100%"}
               _hover={"none"}
               p="0px 10px"

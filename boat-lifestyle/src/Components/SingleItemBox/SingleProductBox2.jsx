@@ -1,6 +1,8 @@
 import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
 import { FaStar } from "react-icons/fa";
-import { MdFlashOn } from "react-icons/md";
+import { AppContext } from "./../Context/AppContext";
+import { useContext } from "react";
+
 export function SingleProductBox({
   id,
   image,
@@ -9,13 +11,15 @@ export function SingleProductBox({
   price,
   strp,
   dec,
+  item,
 }) {
+  const { handleCartData } = useContext(AppContext);
   return (
     <>
       <Box
         borderRadius={"10px"}
         color={"black"}
-        h="451px"
+        h="430px"
         bgColor="#EAEAEA"
         w={"85%"}
         p={"8px"}
@@ -29,29 +33,12 @@ export function SingleProductBox({
         >
           <Image
             m="auto"
-            ml={"15px"}
+            ml={"5px"}
             mt={"10px"}
             w="255px"
             h="58%"
             src={image}
           />
-          <Flex
-            position={"absolute"}
-            top="8px"
-            bg="yellow"
-            color={"black"}
-            alignItems="center"
-            p="3px"
-            h={"1.2rem"}
-            fontSize="0.9rem"
-            ml="-7px"
-            borderRadius={"3px"}
-          >
-            <MdFlashOn />
-            <Text>
-              <p>Super Saver</p>
-            </Text>
-          </Flex>
         </Box>
 
         <Box
@@ -93,6 +80,7 @@ export function SingleProductBox({
 
           <Box mt={"10px"} textAlign={"center"}>
             <Button
+              onClick={() => handleCartData(item)}
               width={"100%"}
               _hover={"none"}
               p="0px 10px"

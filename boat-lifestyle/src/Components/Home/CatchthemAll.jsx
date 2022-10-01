@@ -7,7 +7,7 @@ import {
   Spacer,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { SingleProductBox } from "../SingleProductBox2";
+import { SingleProductBox } from "../SingleItemBox/SingleProductBox2";
 import { NewLaunches, DC, Marvel } from "./data";
 
 export function CatchthemAll() {

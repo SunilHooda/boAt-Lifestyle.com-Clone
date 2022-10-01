@@ -16,9 +16,11 @@ import { IoMdCart } from "react-icons/io";
 import { Categories } from "./Categories";
 import { MenuDrop } from "./MenuDrop";
 import LoginPopup from "./LoginPopup";
+import { CartPopup } from "./CartPopup";
 
 export function Navbar() {
   const [login, setLogin] = useState(false);
+  const [cartShow, setCartShow] = useState(false);
   const [show, setShow] = useState(false);
   const [menu, setMenu] = useState(false);
 
@@ -53,7 +55,7 @@ export function Navbar() {
         boxShadow={" rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;"}
       >
         <Box>
-          <Link>
+          <Link to={"/"}>
             <Image
               padding={"15px"}
               width={"85%"}
@@ -82,22 +84,28 @@ export function Navbar() {
               CATEGORIES <ChevronDownIcon />
               {show && <Categories />}
             </ListItem>
-            <ListItem
-              padding={"1rem"}
-              cursor="pointer"
-              marginTop={"6px"}
-              _hover={{ textDecoration: "underline" }}
-            >
-              SAIL WITH BOAT
-            </ListItem>
-            <ListItem
-              p="1rem"
-              marginTop={"6px"}
-              _hover={{ textDecoration: "underline" }}
-              cursor="pointer"
-            >
-              Offer Zone
-            </ListItem>
+            <Link to={"/sailwithboAt"}>
+              <ListItem
+                padding={"1rem"}
+                cursor="pointer"
+                marginTop={"6px"}
+                _hover={{ textDecoration: "underline" }}
+              >
+                SAIL WITH BOAT
+              </ListItem>
+            </Link>
+
+            <Link to={"/offerZone"}>
+              <ListItem
+                p="1rem"
+                marginTop={"6px"}
+                _hover={{ textDecoration: "underline" }}
+                cursor="pointer"
+              >
+                Offer Zone
+              </ListItem>
+            </Link>
+
             <ListItem
               onMouseEnter={handleMenu}
               onMouseLeave={removeMenu}
@@ -143,7 +151,11 @@ export function Navbar() {
             {login ? <LoginPopup setLogin={setLogin} login={login} /> : null}
           </Box>
           <Box>
-            <IoMdCart cursor={"pointer"} />
+            <IoMdCart
+              cursor={"pointer"}
+              onClick={() => setCartShow(!cartShow)}
+            />
+            <CartPopup show={cartShow} setCartShow={setCartShow} />
           </Box>
         </HStack>
       </Flex>

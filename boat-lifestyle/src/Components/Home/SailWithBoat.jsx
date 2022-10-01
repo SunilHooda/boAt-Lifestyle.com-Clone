@@ -2,7 +2,7 @@ import { Box, Flex, Spacer, Text } from "@chakra-ui/react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { SingleProductBox } from "../SingleProductBox";
+import { SingleProductBox } from "../SingleItemBox/SingleProductBox";
 import { SailWithBoat } from "./data";
 
 export function SailWthBoat() {
