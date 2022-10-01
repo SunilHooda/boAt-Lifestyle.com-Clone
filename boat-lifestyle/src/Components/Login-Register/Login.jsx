@@ -22,6 +22,7 @@ export function Login() {
       alert("Please Create Account first.");
     } else {
       alert("Wrong Credentials");
+      Form.reset();
     }
   };
 

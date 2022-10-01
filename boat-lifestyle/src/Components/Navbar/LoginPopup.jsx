@@ -1,9 +1,21 @@
 import { Box, Button, Flex, Spacer } from "@chakra-ui/react";
 import { ImCross } from "react-icons/im";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const LoginPopup = ({ login, setLogin }) => {
-  const toggleStatus = () => {};
+  const navigate = useNavigate();
+  let credData = JSON.parse(localStorage.getItem("Creds")) || [];
+
+  const toggleStatus = () => {
+    setLogin(!login);
+    if (credData.first_name !== undefined) {
+      localStorage.removeItem("Creds");
+      setTimeout(() => {
+        navigate("/");
+      }, 3000);
+    }
+  };
+
   return (
     <Box
       bg={"white"}
@@ -33,8 +45,7 @@ const LoginPopup = ({ login, setLogin }) => {
             fontWeight: "bold",
           }}
         >
-          {/* {credData.first_name ? `Hi ${credData.first_name}!` : "Hi boAthead!"} */}
-          Hi boAthead!
+          {credData.first_name ? `Hi ${credData.first_name}!` : "Hi boAthead!"}
         </p>
         <Spacer />
         <ImCross
@@ -43,19 +54,18 @@ const LoginPopup = ({ login, setLogin }) => {
           size={13}
         />
       </Flex>
-      <Link>
+      <Link to={"/login"}>
         <Button
           w={"100%"}
-          bg={"red"}
+          bg={"Tomato"}
           color={"white"}
-          _hover={{ bg: "green" }}
+          _hover={{ bg: "red" }}
           onClick={toggleStatus}
           h={"35px"}
           mb={"5px"}
           fontSize="1.1rem"
         >
-          {/* {credData.first_name === undefined ? "Login" : "Logout"} */}
-          Login
+          {credData.first_name === undefined ? "Login" : "Logout"}
         </Button>
       </Link>
     </Box>
