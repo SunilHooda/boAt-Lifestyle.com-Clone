@@ -17,12 +17,31 @@ import { Categories } from "./Categories";
 import { MenuDrop } from "./MenuDrop";
 import LoginPopup from "./LoginPopup";
 import { CartPopup } from "./CartPopup";
+import { AppContext } from "../Context/AppContext";
+import { useContext } from "react";
 
 export function Navbar() {
   const [login, setLogin] = useState(false);
   const [cartShow, setCartShow] = useState(false);
   const [show, setShow] = useState(false);
   const [menu, setMenu] = useState(false);
+
+  const { cartData } = useContext(AppContext);
+
+  const cartCount = {
+    height: "20px",
+    width: "20px",
+    backgroundColor: "red",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: "50%",
+    fontSize: "11px",
+    position: "absolute",
+    right: "40px",
+    top: "10px",
+    color: "white",
+    paddingTop: "1px",
+  };
 
   const handleDrop = () => {
     setShow(!show);
@@ -156,6 +175,9 @@ export function Navbar() {
               onClick={() => setCartShow(!cartShow)}
             />
             <CartPopup show={cartShow} setCartShow={setCartShow} />
+            <p onClick={() => setCartShow(!cartShow)} style={cartCount}>
+              {cartData.length}
+            </p>
           </Box>
         </HStack>
       </Flex>
