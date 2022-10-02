@@ -1,8 +1,7 @@
 import { Box, Text } from "@chakra-ui/react";
 import { AllProduct } from "./AllProducts";
-import { Timer } from "./Timer";
 
-export function SailWithboAt() {
+export function ViewAll() {
   return (
     <>
       <Box>
@@ -15,10 +14,9 @@ export function SailWithboAt() {
             textAlign={"center"}
             cursor={"pointer"}
           >
-            Sail With boAt
+            boAt Collection
           </Text>
         </Box>
-        <Timer />
         <br />
         <AllProduct />
       </Box>

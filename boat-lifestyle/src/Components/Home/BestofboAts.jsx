@@ -1,5 +1,6 @@
 import { Box, Text, UnorderedList, ListItem, Grid } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { SingleProductBox } from "../SingleItemBox/SingleProductBox2";
 import {
   BestSeller,
@@ -48,10 +49,10 @@ export function BestofboAt() {
   }, []);
   return (
     <>
-      <Box>
+      <Box display={"flex"} flexWrap={"wrap"}>
         <Box color="black" h={"auto"} bg="white" pb={"10px"}>
           <Text
-            width={"15%"}
+            width={"100%"}
             p="0.8rem"
             ml={"1.8rem"}
             fontSize="2rem"
@@ -119,16 +120,18 @@ export function BestofboAt() {
             >
               Trending ANC
             </ListItem>
-            <ListItem
-              ml={"450px"}
-              style={style}
-              fontSize={"0.9rem"}
-              color="black"
-              fontWeight={"600"}
-              _hover={{ textDecoration: "underline", color: "red" }}
-            >
-              ViewAll
-            </ListItem>
+            <Link to="/allProducts">
+              <ListItem
+                ml={"450px"}
+                style={style}
+                fontSize={"0.9rem"}
+                color="black"
+                fontWeight={"600"}
+                _hover={{ textDecoration: "underline", color: "red" }}
+              >
+                ViewAll
+              </ListItem>
+            </Link>
           </Grid>
         </UnorderedList>
 

@@ -18,6 +18,7 @@ import {
 import { useContext } from "react";
 import { AppContext } from "../Context/AppContext";
 import { FaTrashAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export function CartPopup({ show, setCartShow }) {
   const { cartData, handleQunatity, handleDelete, total } =
@@ -100,7 +101,7 @@ export function CartPopup({ show, setCartShow }) {
                           RS. {item.price}
                         </Text>
                         <Text textDecoration={"line-through"}>
-                          RS. {item.strprice}
+                          RS. {item.strprice || item.strike_price}
                         </Text>
                       </Flex>
                       <Flex ml="5px" mt="10px">
@@ -170,41 +171,49 @@ export function CartPopup({ show, setCartShow }) {
                   <Spacer />
                   <Text> RS. {total}</Text>
                 </Flex>
-                <Text
-                  mt="20px"
-                  mb="10px"
-                  fontWeight={"bold"}
-                  color="red"
-                  p="5px"
-                  textAlign={"center"}
-                >
-                  Continue Shopping
-                </Text>
+                <Link to="/">
+                  <Text
+                    mt="20px"
+                    mb="10px"
+                    fontWeight={"bold"}
+                    color="red"
+                    p="5px"
+                    textAlign={"center"}
+                  >
+                    Continue Shopping
+                  </Text>
+                </Link>
 
-                <Button
-                  _hover={"none"}
-                  p="5px"
-                  w="100%"
-                  m="auto"
-                  display={"block"}
-                  bg="red"
-                  color="white"
-                  b="20px"
-                >
-                  CASH ON DELIVERY/UPI
-                </Button>
-                <Button
-                  border={"2px solid red"}
-                  _hover={"none"}
-                  w="100%"
-                  m="auto"
-                  mt="15px"
-                  bg="white"
-                  color="red"
-                  p="5px"
-                >
-                  PAY VIA CARD/OTHERS
-                </Button>
+                <Link to="/checkout">
+                  <Button
+                    _hover={"none"}
+                    p="5px"
+                    w="100%"
+                    m="auto"
+                    display={"block"}
+                    bg="red"
+                    color="white"
+                    b="20px"
+                    onClick={handleClose}
+                  >
+                    CASH ON DELIVERY/UPI
+                  </Button>
+                </Link>
+                <Link to="/checkout">
+                  <Button
+                    border={"2px solid red"}
+                    _hover={"none"}
+                    w="100%"
+                    m="auto"
+                    mt="15px"
+                    bg="white"
+                    color="red"
+                    p="5px"
+                    onClick={handleClose}
+                  >
+                    PAY VIA CARD/OTHERS
+                  </Button>
+                </Link>
               </Box>
             </DrawerFooter>
           )}

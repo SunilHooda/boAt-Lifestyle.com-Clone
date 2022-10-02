@@ -22,7 +22,6 @@ export function OfferZone() {
             fontSize="2rem"
             textAlign={"center"}
             cursor={"pointer"}
-            _hover={{ textDecoration: "underline" }}
           >
             OFFER ZONE
           </Text>

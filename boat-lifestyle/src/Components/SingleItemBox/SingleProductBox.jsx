@@ -3,6 +3,7 @@ import { FaStar } from "react-icons/fa";
 import { MdFlashOn } from "react-icons/md";
 import { AppContext } from "./../Context/AppContext";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 export function SingleProductBox({
   id,
@@ -14,7 +15,7 @@ export function SingleProductBox({
   dec,
   item,
 }) {
-  const { handleCartData } = useContext(AppContext);
+  const { handleCartData, handleProductData } = useContext(AppContext);
   const toast = useToast();
 
   const handleToast = () => {
@@ -43,6 +44,7 @@ export function SingleProductBox({
           boxSize={"-webkit-fit-content"}
           alignItems={"center"}
           _hover={{ cursor: "pointer" }}
+          onClick={() => handleProductData(item)}
         >
           <Image
             m="auto"
@@ -78,14 +80,17 @@ export function SingleProductBox({
           border={"1px solid white"}
         >
           <Box textOverflow={"ellipsis"}>
-            <Text
-              noOfLines={1}
-              as={"b"}
-              textAlign={"left"}
-              _hover={{ cursor: "pointer" }}
-            >
-              {name}
-            </Text>
+            <Link to="/productDetails">
+              <Text
+                noOfLines={1}
+                as={"b"}
+                textAlign={"left"}
+                _hover={{ cursor: "pointer" }}
+                onClick={() => handleProductData(item)}
+              >
+                {name}
+              </Text>
+            </Link>
           </Box>
 
           <Flex gap={"0.5rem"} alignItems={"center"} marginBottom="5px">

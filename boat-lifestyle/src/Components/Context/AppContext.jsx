@@ -1,12 +1,32 @@
 import { createContext, useState } from "react";
+import { useToast } from "@chakra-ui/react";
 
 export const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
   const [cartData, setCartData] = useState([]);
   const [isAuth, setIsAuth] = useState(false);
+  const [productData, setProductData] = useState([]);
+  const toast = useToast();
 
+  const handleToast = () => {
+    toast({
+      title: "Product Added To Cart.",
+      // description: "We've created your account for you.",
+      status: "success",
+      duration: 1000,
+      isClosable: true,
+    });
+  };
+
+  const handleProductData = (data) => {
+    setProductData([data]);
+  };
+  const handleClear = () => {
+    setCartData([]);
+  };
   const handleCartData = (data) => {
+    handleToast();
     setCartData([
       ...cartData,
       {
@@ -50,9 +70,12 @@ export const AppContextProvider = ({ children }) => {
         handleCartData,
         handleQunatity,
         handleDelete,
+        handleClear,
         total,
         isAuth,
         setIsAuth,
+        productData,
+        handleProductData,
       }}
     >
       {" "}
