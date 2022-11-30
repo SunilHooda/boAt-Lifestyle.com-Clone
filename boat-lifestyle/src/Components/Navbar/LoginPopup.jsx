@@ -23,7 +23,7 @@ const LoginPopup = ({ login, setLogin }) => {
       w={"210px"}
       position="absolute"
       right={"15px"}
-      top={"70px"}
+      top={"102px"}
       zIndex={"10"}
       p="5px"
       borderRadius={"5px"}

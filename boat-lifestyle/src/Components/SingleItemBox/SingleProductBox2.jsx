@@ -20,27 +20,20 @@ export function SingleProductBox({
       <Box
         borderRadius={"10px"}
         color={"black"}
-        h="430px"
+        h="auto"
         bgColor="#EAEAEA"
-        w={"85%"}
+        w={"95%"}
         p={"8px"}
       >
         <Box
-          w="255px"
-          h="37%"
+          w="80%"
+          h="auto"
           boxSize={"-webkit-fit-content"}
           alignItems={"center"}
           _hover={{ cursor: "pointer" }}
           onClick={() => handleProductData(item)}
         >
-          <Image
-            m="auto"
-            ml={"5px"}
-            mt={"10px"}
-            w="255px"
-            h="58%"
-            src={image}
-          />
+          <Image m="auto" w="100%" h="100%" src={image} alt={name} />
         </Box>
 
         <Box

@@ -79,6 +79,86 @@ export const SailWithBoat = [
     rating: " 4.8 | 432 reviews",
     dec: "You Save: ₹ 3391 (67%)",
   },
+  {
+    id: 71,
+    image:
+      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-image-2_400x.png?v=1655534170",
+    title: "Stone 190 DC Edition",
+    rating: "5.0 | 102 reviews",
+    strprice: "2990",
+    price: "1299",
+    dec: "You Save: ₹ 1691 (57%)",
+  },
+  {
+    id: 73,
+    image:
+      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/03_4ac3cfb6-1075-4376-9dc1-51bdf79b8558_400x.jpg?v=1656100876",
+    title: "Airdopes 131-Wonder",
+    rating: "4.8 | 156 reviews",
+    strprice: "7,990",
+    price: "2999",
+    dec: "You Save: ₹ 4991 (62%)",
+  },
+  {
+    id: 1,
+    image:
+      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/2_cae7e95b-ed02-4b49-9a88-e4e5324111ba_400x.png?v=1655888228",
+    title: "boAt Rockerz 460",
+    rating: "5.0 | 2 reviews",
+    strprice: "2,990",
+    price: "1299",
+    dec: "You Save: ₹ 1691 (57%)",
+  },
+  {
+    id: 3,
+    image:
+      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/7499af44-9d7a-489c-80f0-51f7799289e4_400x.png?v=1625045491",
+    title: "boAt Rockerz 450",
+    rating: "4.8 | 121 reviews",
+    strprice: "7,990",
+    price: "2999",
+    dec: "You Save: ₹ 4991 (62%)",
+  },
+  {
+    id: 1,
+    image:
+      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/402-main-img_400x.png?v=1630059242",
+    title: "boAt Airdopes 402-Wireless",
+    rating: "4.8 | 166 reviews",
+    strprice: "3,490",
+    price: "1299",
+    dec: "You Save: ₹ 2191 (63%)",
+  },
+  {
+    id: 2,
+    image:
+      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/airdopes-121-v2-blue_400x.png?v=1612765376",
+    title: "boAt Airdopes 121 v2",
+    rating: "4.9 | 476 reviews",
+    strprice: "3,990",
+    price: "1399",
+    dec: "You Save: ₹ 2591 (65%)",
+  },
+  {
+    id: 81,
+    image:
+      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/450ca_400x.png?v=1639990534",
+    title: "boAt Rockerz 450-Captain",
+    rating: "4.8 | 126 reviews",
+    strprice: "7,990",
+    price: "2999",
+    dec: "You Save: ₹ 4991 (62%)",
+  },
+  {
+    id: 83,
+    image:
+      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/190ca_400x.png?v=1639989015",
+    title: "boAt Stone 190-Captain",
+    rating: "4.9 | 146 reviews",
+    strprice: "3,990",
+    price: "1399",
+    dec: "You Save: ₹ 2591 (65%)",
+  },
 ];
 
 export const BestSeller = [
@@ -124,68 +204,6 @@ export const BestSeller = [
     price: "1299",
     dec: "You Save: ₹ 1691 (57%)",
   },
-  {
-    id: 5,
-    image:
-      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-img-R333-1_400x.png?v=1641801662",
-    title: "boAt Rockerz 333",
-    rating: "4.9 | 146 reviews",
-    strprice: "3,990",
-    price: "1399",
-    dec: "You Save: ₹ 2591 (65%)",
-  },
-];
-export const SmartWatches = [
-  {
-    id: 1,
-    image:
-      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/xtend_black_400x.png?v=1650387008",
-    title: "boAt Watch Xtend‌ with Alexa",
-    rating: "4.8 | 133 reviews",
-    strprice: "3,490",
-    price: "1299",
-    dec: "You Save: ₹ 2191 (63%)",
-  },
-  {
-    id: 2,
-    image:
-      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/a6549acb-b075-4c3e-8ed3-9c9fcba32d42_400x.png?v=1625046216",
-    title: "boAt Storm Smart Watches",
-    rating: "4.8 | 466 reviews",
-    strprice: "2,990",
-    price: "1099",
-    dec: "You Save: ₹ 1900 (63%)",
-  },
-  {
-    id: 3,
-    image:
-      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_blue_759e7ad4-18af-4407-9e8a-91c0058b1a74_400x.png?v=1648108782",
-    title: "boAt Wave Lite Smartwatch -",
-    rating: "4.8 | 578 reviews",
-    strprice: "7,990",
-    price: "2999",
-    dec: "You Save: ₹ 4991 (62%)",
-  },
-  {
-    id: 4,
-    image:
-      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/blue_d8db0011-02f7-43d6-9fe7-7a71a9ed86d2_400x.png?v=1654312290",
-    title: "boAt Wave Connect",
-    rating: "5.0 | 6 reviews",
-    strprice: "2,990",
-    price: "1299",
-    dec: "You Save: ₹ 1691 (57%)",
-  },
-  {
-    id: 5,
-    image:
-      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_eaf60560-3afb-4dda-b4c0-598078f7ce72_400x.png?v=1647767874",
-    title: "boAt Wave Pro Smartwatch..",
-    rating: "4.9 | 146 reviews",
-    strprice: "3,990",
-    price: "1399",
-    dec: "You Save: ₹ 2591 (65%)",
-  },
 ];
 
 export const TrendingWireless = [
@@ -198,16 +216,6 @@ export const TrendingWireless = [
     strprice: "2,990",
     price: "1299",
     dec: "You Save: ₹ 1691 (57%)",
-  },
-  {
-    id: 2,
-    image:
-      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_a08fff6a-7c3d-4663-9499-3421df127e94_400x.png?v=1641801688",
-    title: "boAt Rockerz 330",
-    rating: "4.9 | 176 reviews",
-    strprice: "3,990",
-    price: "1399",
-    dec: "You Save: ₹ 2591 (65%)",
   },
   {
     id: 3,
@@ -282,16 +290,6 @@ export const TopEarbuds = [
     price: "1299",
     dec: "You Save: ₹ 1691 (57%)",
   },
-  {
-    id: 5,
-    image:
-      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/218997d1-3fe9-4a19-809c-94a8a2d05273_400x.png?v=1625045659",
-    title: "boAt Airdopes 441 Pro",
-    rating: "4.9 | 1116 reviews",
-    strprice: "3,990",
-    price: "1399",
-    dec: "You Save: ₹ 2591 (65%)",
-  },
 ];
 
 export const TrendingANC = [
@@ -335,31 +333,9 @@ export const TrendingANC = [
     price: "1299",
     dec: "You Save: ₹ 1691 (57%)",
   },
-  {
-    id: 5,
-    image:
-      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_blue_708eb679-d90c-4287-83e7-60a83fe6b09e_400x.png?v=1650020838",
-    title: "boAt Airdopes 500 ANC",
-    rating: "4.9 | 1116 reviews",
-    strprice: "3,990",
-    price: "1399",
-    dec: "You Save: ₹ 2591 (65%)",
-  },
 ];
 
 export const NewLaunches = [
-  {
-    id: 22,
-    video:
-      "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/quinn_rfcpupPH91wNHtK3BOvFW_card_thumbnail.mp4?v=3606890552447842088",
-    image:
-      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/2_4f4984e7-01a2-4398-ae64-a7c021b1eaaf_300x.png?v=1663246010",
-    title: "Xtend Talk - Premium Design..",
-    strprice: "6,990",
-    price: "2999",
-    dec: "You Save: ₹ 3991 (57%)",
-    type: "Smart Watches",
-  },
   {
     id: 23,
     video:
@@ -423,16 +399,6 @@ export const Marvel = [
     dec: "You Save: ₹ 4991 (62%)",
   },
   {
-    id: 82,
-    image:
-      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/190bp_400x.png?v=1639989950",
-    title: "boAt Stone 190 - Black",
-    rating: "5.0 | 152 reviews",
-    strprice: "2,990",
-    price: "1299",
-    dec: "You Save: ₹ 1691 (57%)",
-  },
-  {
     id: 83,
     image:
       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/190ca_400x.png?v=1639989015",
@@ -474,16 +440,6 @@ export const DC = [
     strprice: "2990",
     price: "1299",
     dec: "You Save: ₹ 1691 (57%)",
-  },
-  {
-    id: 72,
-    image:
-      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S190-FI-DC_WW02_a7ba0e48-779c-4625-acb9-2f79310b4c8b_400x.png?v=1656101346",
-    title: "Stone 190 Wonder Woman DC",
-    rating: "4.9 | 416 reviews",
-    strprice: "3,990",
-    price: "1399",
-    dec: "You Save: ₹ 2591 (65%)",
   },
   {
     id: 73,

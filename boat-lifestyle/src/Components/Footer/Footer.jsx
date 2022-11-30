@@ -10,7 +10,7 @@ import {
 
 const Footer = () => {
   return (
-    <div>
+    <div style={{ marginTop: "15px" }}>
       <div className="disclaimer">
         <p className="disclaimerText">
           India's fastest growing audio & wearables brand. The most incredible
