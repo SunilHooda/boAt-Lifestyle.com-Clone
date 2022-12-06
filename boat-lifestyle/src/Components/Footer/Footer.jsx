@@ -7,10 +7,11 @@ import {
   FaYoutube,
   FaLinkedinIn,
 } from "react-icons/fa";
+import logo from "./logo.gif";
 
 const Footer = () => {
   return (
-    <div>
+    <div style={{ marginTop: "15px" }}>
       <div className="disclaimer">
         <p className="disclaimerText">
           India's fastest growing audio & wearables brand. The most incredible
@@ -23,8 +24,11 @@ const Footer = () => {
           <div className="sendEmailBox">
             <div className="footerLogo">
               <img
-                src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Asset_2_288x-8_5.png?v=1661838672"
-                alt=""
+                w="90px"
+                // height="70px"
+                src={logo}
+                alt="boAt"
+                borderRadius={10}
               />
             </div>
             <p className="subscribeText">

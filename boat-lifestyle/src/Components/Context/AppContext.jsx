@@ -12,9 +12,9 @@ export const AppContextProvider = ({ children }) => {
   const handleToast = () => {
     toast({
       title: "Product Added To Cart.",
-      // description: "We've created your account for you.",
+      position: "top",
       status: "success",
-      duration: 1000,
+      duration: 2000,
       isClosable: true,
     });
   };
@@ -78,7 +78,6 @@ export const AppContextProvider = ({ children }) => {
         handleProductData,
       }}
     >
-      {" "}
       {children}
     </AppContext.Provider>
   );

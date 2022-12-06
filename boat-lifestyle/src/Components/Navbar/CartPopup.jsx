@@ -6,6 +6,7 @@ import {
   Button,
   Divider,
   Image,
+  useToast,
 } from "@chakra-ui/react";
 import {
   Drawer,
@@ -18,11 +19,32 @@ import {
 import { useContext } from "react";
 import { AppContext } from "../Context/AppContext";
 import { FaTrashAlt } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export function CartPopup({ show, setCartShow }) {
+  const toast = useToast();
+  const navigate = useNavigate();
+
   const { cartData, handleQunatity, handleDelete, total } =
     useContext(AppContext);
+
+  const handleClose1 = () => {
+    const credData = JSON.parse(localStorage.getItem("LoginCreds")) || [];
+    if (credData.length === 0) {
+      toast({
+        title: `Please login first !!!`,
+        status: "error",
+        duration: 1000,
+        position: "top",
+        isClosable: true,
+      });
+      setCartShow(!show);
+      navigate("/login");
+    } else {
+      setCartShow(!show);
+      navigate("/checkout");
+    }
+  };
 
   const handleClose = () => {
     setCartShow(!show);
@@ -46,7 +68,6 @@ export function CartPopup({ show, setCartShow }) {
               </Text>
               <Spacer />
               <Box>
-                {" "}
                 <DrawerCloseButton mt={"-4px"} onClick={handleClose} />
               </Box>
             </Flex>
@@ -184,36 +205,33 @@ export function CartPopup({ show, setCartShow }) {
                   </Text>
                 </Link>
 
-                <Link to="/checkout">
-                  <Button
-                    _hover={"none"}
-                    p="5px"
-                    w="100%"
-                    m="auto"
-                    display={"block"}
-                    bg="red"
-                    color="white"
-                    b="20px"
-                    onClick={handleClose}
-                  >
-                    CASH ON DELIVERY/UPI
-                  </Button>
-                </Link>
-                <Link to="/checkout">
-                  <Button
-                    border={"2px solid red"}
-                    _hover={"none"}
-                    w="100%"
-                    m="auto"
-                    mt="15px"
-                    bg="white"
-                    color="red"
-                    p="5px"
-                    onClick={handleClose}
-                  >
-                    PAY VIA CARD/OTHERS
-                  </Button>
-                </Link>
+                <Button
+                  _hover={"none"}
+                  p="5px"
+                  w="100%"
+                  m="auto"
+                  display={"block"}
+                  bg="red"
+                  color="white"
+                  b="20px"
+                  onClick={handleClose1}
+                >
+                  CASH ON DELIVERY/UPI
+                </Button>
+
+                <Button
+                  border={"2px solid red"}
+                  _hover={"none"}
+                  w="100%"
+                  m="auto"
+                  mt="15px"
+                  bg="white"
+                  color="red"
+                  p="5px"
+                  onClick={handleClose1}
+                >
+                  PAY VIA CARD/OTHERS
+                </Button>
               </Box>
             </DrawerFooter>
           )}

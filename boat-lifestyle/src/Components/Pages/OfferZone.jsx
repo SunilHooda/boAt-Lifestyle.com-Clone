@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, Stack } from "@chakra-ui/react";
 import { AllProduct } from "./AllProducts";
 
 export function OfferZone() {
@@ -14,18 +14,21 @@ export function OfferZone() {
         </Box>
         <br />
         <br />
-        <Box color="black" h={"auto"} bg="white" pb={"10px"}>
-          <Text
-            width={"15%"}
-            p="0.8rem"
-            ml={"1.8rem"}
-            fontSize="2rem"
-            textAlign={"center"}
-            cursor={"pointer"}
-          >
-            OFFER ZONE
-          </Text>
-        </Box>
+        <Stack>
+          <Box>
+            <Text
+              width={"100%"}
+              p="0.8rem"
+              color="black"
+              fontSize="2.5rem"
+              textAlign={"center"}
+              cursor={"pointer"}
+              _hover={{ textDecoration: "underline" }}
+            >
+              Offer Zone
+            </Text>
+          </Box>
+        </Stack>
         <br />
         <AllProduct />
       </Box>

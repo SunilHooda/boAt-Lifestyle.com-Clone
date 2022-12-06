@@ -1,11 +1,13 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import React from "react";
+import { useToast } from "@chakra-ui/react";
 import { Container, Form } from "./RegisterStyles";
 
 export function Register() {
   const [data, setData] = useState({});
   const navigate = useNavigate();
+  const toast = useToast();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,7 +20,13 @@ export function Register() {
   };
 
   const postData = async () => {
-    alert("Account Created Successfully");
+    toast({
+      title: `Account Created Successfully`,
+      status: "success",
+      duration: 1000,
+      position: "top",
+      isClosable: true,
+    });
     localStorage.setItem("Creds", JSON.stringify(data));
     navigate("/login");
   };
