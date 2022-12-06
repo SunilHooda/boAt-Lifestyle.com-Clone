@@ -12,7 +12,7 @@ export function Categories() {
         boxSize="border-box"
         border={"1px solid lightgrey"}
         position="absolute"
-        top="86px"
+        top="100px"
         p="40px"
         alignItems={"center"}
         listStyleType={"none"}
