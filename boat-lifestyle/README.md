@@ -8,8 +8,8 @@
 • A fully responsive homepage including a responsive multicarousel, differet product section and sale timer.<br>
 • A fully responsive cart sction with login authencation feature. <br>
 • Given Register, login and logout functionaliy using local storage. <br>
-• Given Sort and Filter functionaliy. <br>
 • Used ContextApi to Add items to the cart, Increse and Decrease a single item quantity in cart, and Remove a item from the cart. <br>
+• Given Sort and Filter functionaliy. <br>
 • Built the checkout, payments and OTP page which a user cannot access without login.
 <br>
 <br>
