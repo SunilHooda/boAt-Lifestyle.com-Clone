@@ -9,6 +9,7 @@ import { AppContext } from "../Context/AppContext";
 import { useContext } from "react";
 import LoginPopup from "./LoginPopup";
 import { CartPopup } from "./CartPopup";
+import logo from "./logo.gif";
 import {
   Box,
   Container,
@@ -82,10 +83,11 @@ function Navbar() {
               <Stack direction="row" spacing={8}>
                 <Link to="/">
                   <Image
-                    w="100%"
-                    height="auto"
-                    src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Asset_2_288x-8_5_small.png?v=1661838672"
+                    w="90px"
+                    height="70px"
+                    src={logo}
                     alt="boAt"
+                    borderRadius={10}
                   />
                 </Link>
                 {isLargerThan576 ? (
@@ -185,7 +187,7 @@ function Navbar() {
               </Stack>
             </Box>
             <Spacer />
-            <Box p="3">
+            <Box p="6">
               {isLargerThan1280 ? (
                 <Stack direction="row" spacing={8} align="center">
                   <SearchIcon
@@ -193,7 +195,7 @@ function Navbar() {
                     position={"absolute"}
                     zIndex="5"
                     color={"black"}
-                    top="25px"
+                    top="75px"
                     ml="40px"
                   />
                   <Input
@@ -226,7 +228,7 @@ function Navbar() {
                         fontSize: "11px",
                         position: "absolute",
                         marginLeft: "12px",
-                        top: "45px",
+                        top: "57px",
                         color: "white",
                       }}
                     >
@@ -312,7 +314,7 @@ function Navbar() {
                         fontSize: "11px",
                         position: "absolute",
                         marginLeft: "12px",
-                        top: "45px",
+                        top: "57px",
                         color: "white",
                       }}
                     >

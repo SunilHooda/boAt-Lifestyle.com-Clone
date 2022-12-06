@@ -2,10 +2,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import React from "react";
 import { Container, Form } from "./LoginStyles";
+import { useToast } from "@chakra-ui/react";
 
 export function Login() {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
   const navigate = useNavigate();
+  const toast = useToast();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,12 +18,31 @@ export function Login() {
       credData.email === credentials.email &&
       credData.password === credentials.password
     ) {
-      alert("Login Successful");
+      toast({
+        title: `Login Successful`,
+        status: "success",
+        duration: 1000,
+        position: "top",
+        isClosable: true,
+      });
+      localStorage.setItem("LoginCreds", JSON.stringify(credentials));
       navigate("/");
     } else if (credData.length === 0) {
-      alert("Please Create Account first.");
+      toast({
+        title: `User not registered !!!`,
+        status: "error",
+        duration: 1000,
+        position: "top",
+        isClosable: true,
+      });
     } else {
-      alert("Wrong Credentials");
+      toast({
+        title: `Wrong Credentials !!!`,
+        status: "error",
+        duration: 1000,
+        position: "top",
+        isClosable: true,
+      });
       Form.reset();
     }
   };
@@ -31,10 +52,22 @@ export function Login() {
     console.log("credData:", credData);
 
     if (credData.email === credentials.email && credData.password === "") {
-      alert(`Your Password is ${credentials.password}`);
+      toast({
+        title: `Your Password is ${credentials.password}`,
+        status: "success",
+        duration: 1500,
+        position: "top",
+        isClosable: true,
+      });
       navigate("/");
     } else {
-      alert("Please Enter Your Email");
+      toast({
+        title: `Please Enter Your Email`,
+        status: "error",
+        duration: 1500,
+        position: "top",
+        isClosable: true,
+      });
     }
   };
 
@@ -72,6 +105,7 @@ export function Login() {
                 onChange={onChange}
                 type="email"
                 id="customer_email"
+                required
               />
             </div>
             <div className="login-password">
@@ -82,6 +116,7 @@ export function Login() {
                   onChange={onChange}
                   type="password"
                   id="customer_password"
+                  required
                 />
               </div>
               <div onClick={handlePassword} className="forgot-password">

@@ -2,8 +2,11 @@ import { useEffect, useState } from "react";
 import { AllProducts } from "./AllProductsData";
 import { Box, Grid, Container, GridItem, Select } from "@chakra-ui/react";
 import { SingleProductBox } from "../SingleItemBox/SingleProduct3";
+import InfiniteScroll from "react-infinite-scroll-component";
+
 export function AllProduct() {
   const [data, setData] = useState([]);
+  const [items, setItems] = useState(Array.from({ length: 16 }));
 
   const label = {
     fontSize: "14px",
@@ -60,9 +63,16 @@ export function AllProduct() {
     setData(temp);
   };
 
+  const fetchMoreData = () => {
+    setTimeout(() => {
+      setItems(items.concat(Array.from({ length: 16 })));
+    }, 2000);
+  };
+
   useEffect(() => {
-    setData(AllProducts);
-  }, []);
+    setData(AllProducts.slice(0, items.length));
+  }, [items]);
+
   return (
     <>
       <Box display={"flex"} flexDirection={"column"}>
@@ -102,38 +112,44 @@ export function AllProduct() {
           align="center"
           maxW="container.xl"
         >
-          <Grid
-            w="full"
-            templateColumns={{
-              base: "repeat(1, 1fr)",
-              sm: "repeat(1, 1fr)",
-              md: "repeat(2, 1fr)",
-              lg: "repeat(4, 1fr)",
-            }}
-            gap={4}
-            paddingTop="5px"
+          <InfiniteScroll
+            dataLength={data.length}
+            next={fetchMoreData}
+            hasMore={data.length < 200}
+            loader={<h4>Loading...</h4>}
           >
-            {data &&
-              data.map((item, index) => {
-                return (
-                  <GridItem key={item.id} justify={"center"} align="center">
-                    <SingleProductBox
-                      key={index}
-                      name={item.title}
-                      price={item.price}
-                      rating={item.rating}
-                      image={item.images[0]}
-                      id={index}
-                      strp={item.strike_price}
-                      dec={item.youSaved}
-                      item={item}
-                    />
-                  </GridItem>
-                );
-              })}
-          </Grid>
+            <Grid
+              w="full"
+              templateColumns={{
+                base: "repeat(1, 1fr)",
+                sm: "repeat(1, 1fr)",
+                md: "repeat(2, 1fr)",
+                lg: "repeat(4, 1fr)",
+              }}
+              gap={4}
+              paddingTop="5px"
+            >
+              {data &&
+                data.map((item, index) => {
+                  return (
+                    <GridItem key={item.id} justify={"center"} align="center">
+                      <SingleProductBox
+                        key={index}
+                        name={item.title}
+                        price={item.price}
+                        rating={item.rating}
+                        image={item.images[0]}
+                        id={index}
+                        strp={item.strike_price}
+                        dec={item.youSaved}
+                        item={item}
+                      />
+                    </GridItem>
+                  );
+                })}
+            </Grid>
+          </InfiniteScroll>
         </Container>
-        ;
       </Box>
     </>
   );
