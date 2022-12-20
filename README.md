@@ -1,6 +1,6 @@
 # boAt-Lifestyle.com-Clone
 
-• A cloned website of boat-lifestyle.com, which is a consumer electronics brand in India. <br>
+India's fastest growing audio & wearables brand. The most incredible range of wireless earphones, earbuds, headphones, smart watches, and home audio <br>
 • Self project developed in 5 days.
 <br>
 <br>
